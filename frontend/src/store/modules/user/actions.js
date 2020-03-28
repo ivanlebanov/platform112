@@ -81,9 +81,11 @@ export default {
       commit('SET_LOGGED_IN', true)
       commit('SET_USER', data)
       commit('SET_LOADED', true)
+      return data
     } catch (e) {
       commit('SET_LOADED', true)
       commit('SET_LOGGED_IN', false)
+      return null
     }
   },
 
