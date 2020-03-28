@@ -13,11 +13,43 @@ class Projects {
       data = [...data, ...resp.data]
     }
     data = data.map(item => { return item.guid.rendered })
-    // const test = data[0]
-    // const html = await rp(test)
-    // let elem = $('.entry-content', html)
-    await fs.writeFile(`./uploads/test.json`, JSON.stringify(data), (param) => { })
-    // console.log(elem[0].children)
+    for (const test of data) {
+      const html = await rp(test)
+      let elem = $('.entry-content', html)
+      let description = ''
+      let finished = false
+      let startingAt = 0
+      for (let i = 14; i < elem[0].children.length; i++) {
+        if (!finished && elem[0].children[i].type === 'text') {
+          description += elem[0].children[i].data
+        }
+        if (elem[0].children[i].name === 'span' && elem[0].children[i].attribs && elem[0].children[i].attribs && elem[0].children[i].attribs.class === 'single-idea-title' ) {
+          finished = true
+          startingAt = i
+        }
+      }
+      let solution = ''
+      finished = false
+      for (let i = startingAt + 1; i < elem[0].children.length; i++) {
+        if (!finished && elem[0].children[i].type === 'text') {
+          solution += elem[0].children[i].data
+        }
+        if (elem[0].children[i].name === 'span' && elem[0].children[i].attribs && elem[0].children[i].attribs && elem[0].children[i].attribs.class === 'single-idea-title' ) {
+          finished = true
+        }
+      }
+      let obj = new Project({
+        name: elem[0].children[0].next.data,
+        slack: elem[0].children[4].data,
+        category: elem[0].children[6].next.data,
+        needs: elem[0].children[10].data,
+        description,
+        solution
+      })
+      await obj.save()
+    }
+    // await fs.writeFile(`./uploads/test.json`, JSON.stringify(data), (param) => { })
+
   }
 }
 
