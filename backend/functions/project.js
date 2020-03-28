@@ -49,7 +49,10 @@ class Projects {
       await obj.save()
     }
     // await fs.writeFile(`./uploads/test.json`, JSON.stringify(data), (param) => { })
+  }
 
+  static async list (req, res) {
+    res.send(await Project.find().exec())
   }
 }
 
