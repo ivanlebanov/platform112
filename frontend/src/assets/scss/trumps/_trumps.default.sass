@@ -1,0 +1,310 @@
+// ========================================
+//   #trumps.default
+// ========================================
+
+body
+  .btn-dark
+    background: $main--active
+    border-color: $main--active
+    &:hover
+      background: $main
+      border-color: $main
+  .card
+    border: 1px solid #E6EAEE
+    // box-shadow: 0 5px 10px 0 rgba(0,64,128,.05)
+.absolute-div
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  background: rgba(255, 255,255, .5)
+  z-index: 9
+  p
+    @include vertical-align()
+    text-align: center
+.big-card
+  min-height: 113px
+  text-align: center
+  p
+    color: #7F8FA4
+    font-family: "Proxima Nova Semibold", sans-serif
+    text-transform: uppercase
+    font-size: 14px
+  h3
+    margin-top: 5px
+  div[class*='col-md-']
+    position: relative
+    &:after
+      content: ' '
+      position: absolute
+      right: -1px
+      top: 15px
+      bottom: 15px
+      background: #DFE3E9
+      width: 1px
+      height: 40px
+    &:last-child
+      &:after
+        display: none
+body .datepicker .vue-input, .timepicker .vue-input, .datetime-picker .vue-input
+  border: none
+  padding: 0
+#modal-3
+  .modal-footer
+    display: none!important
+.imvisible
+  visibility: hidden!important
+.categories
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    margin-bottom: 5px
+  svg
+    width: 24px
+    height: 24px
+    float: left
+    margin-right: 5px
+.ring
+  circle
+    transition: stroke-dashoffset 0.35s
+    transform: rotate(-90deg)
+    transform-origin: 50% 50%
+  #loader-2 span, #loader-3 span, .loader-3 span
+    display: inline-block
+    width: 7px
+    height: 7px
+    border-radius: 100%
+    background-color: #59CEEB
+    margin: 3px
+  #loader-2 span:nth-child(1), #loader-3 span:nth-child(1), .loader-3 span:nth-child(1)
+    animation: bounce 1s ease-in-out infinite
+  #loader-2 span:nth-child(2), #loader-3 span:nth-child(2), .loader-3 span:nth-child(2)
+    animation: bounce 1s ease-in-out 0.33s infinite
+  #loader-2 span:nth-child(3), #loader-3 span:nth-child(3), .loader-3 span:nth-child(3)
+    animation: bounce 1s ease-in-out 0.66s infinite
+  .loader
+    width: 100px
+    height: 100px
+    border-radius: 100%
+    position: relative
+    margin: 0 auto
+    position: absolute
+    top: 130px
+    left: 65px
+
+
+@keyframes bounce
+  0%, 75%, 100%
+    -webkit-transform: translateY(0)
+    -ms-transform: translateY(0)
+    -o-transform: translateY(0)
+    transform: translateY(0)
+  25%
+    -webkit-transform: translateY(-10px)
+    -ms-transform: translateY(-10px)
+    -o-transform: translateY(-10px)
+    transform: translateY(-10px)
+.integrations
+  text-align: center
+  .list-group-item
+    border-top: 0
+    border-bottom: 0
+    &:first-child
+      border-left: 0
+    &:last-child
+      border-right: 0
+  img
+    display: block
+    margin: 10px auto
+    max-height: 50px
+    width: auto
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      display:inline-block
+      margin: 0 5px
+    svg
+      width: 24px
+      height: 24px
+.integrations-single
+  text-align: left
+  .list-group-item
+    border-top: 0
+    border-bottom: 0
+    &:first-child
+      border-left: 0
+    &:last-child
+      border-right: 0
+  img
+    display: block
+    margin: 10px 0
+    max-height: 50px
+    width: auto
+    border: none
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      margin: 0 5px
+      width: 100%
+    svg
+      width: 24px
+      height: 24px
+.legal section
+  padding: 3em 10%
+.legal-section
+  margin-bottom: 30px
+.legal
+  section > div.container-fluid
+    margin-bottom: 57px
+  .sub
+    margin-bottom: 20px
+  h1
+    font-size: 100px
+    color: #c5bfbf
+  span
+    font-size: 20px
+    display: inline
+    color: #807b7b
+  p
+    display: inline
+    padding-left: 5px
+    padding-bottom: 30px
+    font-size: 20px
+    color: rgb(192, 192, 192)
+    line-height: 1.2
+.spend-page
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    img
+      min-width: 66px
+      width: 66px
+
+
+  .box
+    display: flex
+    align-items: center
+    text-decoration: none
+
+  .overtop
+    position: absolute
+    top: 10px
+    right: 20px
+    background: #fff
+    z-index: 9
+    padding: 15px
+    border: 1px solid #E6EAEE
+    border-radius: 4px
+    height: 190px
+    overflow-x: auto
+
+  .status
+    width: 15px
+    height: 2px
+    background: #28a745
+    display: block
+    float: left
+    margin: 7px 10px 0 0
+    &.status-1
+      background: #ffc107
+
+    &.status-2
+      background: #dc3545
+
+
+  .red-highlight
+    color: #fff
+    margin-left: -20px
+    margin-right: -20px
+    padding-bottom: 5px
+    background: rgba(#F4C2C2, .9)
+    .headings
+      color: #fff
+
+
+  .tile.tile-list:last-child
+    border-bottom: none!important
+
+  .tile.tile-list
+    border: none
+    min-height: 1px
+    border-bottom: 1px solid #E6EAEE
+    h5
+      margin-top: 0
+
+    .mt-1
+      margin-top: 8px!important
+      margin-bottom: 10px
+.usage-page .main
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    img
+      min-width: 66px
+      width: 66px
+  .box
+    display: flex
+    align-items: center
+    text-decoration: none
+
+  .overtop
+    position: absolute
+    top: 10px
+    right: 20px
+    background: #fff
+    z-index: 9
+    padding: 15px
+    border: 1px solid #E6EAEE
+    border-radius: 4px
+    height: 190px
+    overflow-x: auto
+
+  .status
+    width: 15px
+    height: 2px
+    background: #28a745
+    display: block
+    float: left
+    margin: 7px 10px 0 0
+    &.status-1
+      background: #ffc107
+
+    &.status-2
+      background: #dc3545
+
+
+  .red-highlight
+    color: #fff
+    margin-left: -20px
+    margin-right: -20px
+    padding-bottom: 5px
+    background: rgba(#F4C2C2, .9)
+    .headings
+      color: #fff
+.suggested
+  position: absolute
+  left: 0
+  top: 38px
+  list-style: none
+  padding: 0
+  margin: 0
+  right: 0
+  background: #fff
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px
+  border: 1px solid #E6EAEE
+  li
+    padding: 10px 15px
+    cursor: pointer
+    &:hover
+      color: #fff
+      background: #faf4f4

@@ -1,19 +1,22 @@
 const jwt = require('jsonwebtoken')
+const User = require('../models/User.js')
 
-module.exports = (req, res, next) => {
+module.exports = async (req, res, next) => {
   const token = req.headers['x-access-token']
   if (!token) {
     return res.status(403).send({ auth: false, message: 'No token provided.' })
   }
-  jwt.verify(token, process.env.JWT_SECRET, function (err, decoded) {
-    if (err) {
-      return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' })
+  try {
+    const data = jwt.verify(token, process.env.JWT_SECRET)
+    const user = await User.findOne({ _id: data._id, 'tokens.token': token }).exec()
+    if (!user) {
+      // throw new Error()
+      res.status(401).send({ error: 'Not authorized to access this resource' })
     }
-    if (!err) {
-      req.userId = decoded._id
-      req.userEmail = decoded.email
-      req.userFullName = `${decoded.firstName} ${decoded.lastName}`
-    }
+    req.user = user
+    req.token = token
     next()
-  })
+  } catch (error) {
+    res.status(401).send({ error: 'Not authorized to access this resource' })
+  }
 }

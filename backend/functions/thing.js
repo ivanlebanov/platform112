@@ -1,9 +1,9 @@
 const Thing = require('../models/Thing.js')
 
-class Integrations {
-  static async add (req, res) {
+class Things {
+  static async list (req, res) {
     res.json(await Thing.find().exec())
   }
 }
 
-module.exports = Integrations
+module.exports = Things

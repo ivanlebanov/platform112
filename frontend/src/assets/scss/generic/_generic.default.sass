@@ -1,0 +1,139 @@
+// ========================================
+//   #generic.default
+// ========================================
+
+section
+  width: 100%
+  float: left
+  display: block
+.row
+  //  width: 100%
+body
+  background-color: #EFF3F6
+  background: #EFF3F6!important
+.clickable
+  cursor: pointer
+.main
+  position: relative
+  margin-top: 62px
+  overflow-y: auto
+  padding: 50px 0 50px 15px
+  width: 100%
+  .footer--main
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: 10
+
+.dashbord
+  h1
+    margin-bottom: 25px
+
+  svg
+    max-width: 30%
+  .card-link-item
+    cursor: pointer
+    position: relative
+    transition: .5s all ease
+    top: 0
+    margin-bottom: 27px
+    &:hover
+        top: -5px
+
+
+  .card.spend
+    cursor: default
+    h2
+      float: left
+
+    .btn-group
+      float: right
+.top-bar
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  font-family: 'Proxima Nova Semibold'
+  // background: $white
+  // box-shadow: 0 5px 10px 0 rgba(0,64,128,.05)
+  z-index: 9
+  border-bottom: 1px solid $border-grey
+  .avatar-text
+    width: calc(100% - 55px)
+    text-overflow: ellipsis
+    white-space: nowrap
+  &:before
+    content: url('./img/search.svg')
+    width: 30px
+    height: 30px
+    position: absolute
+    z-index: -1
+    top: 30px
+    left: 30px
+  input
+    float: left
+    width: calc( 100% - 260px )
+    border: none
+    padding: 27px 30px 27px 55px
+    background: none
+    &:focus
+      outline: none
+  svg
+    width: 20px
+    padding: 6px 0 0
+    position: relative
+    fill: $icon-grey
+    position: absolute
+    right: 16px
+  & > ul
+    margin: 0
+    border-left: 1px solid $border-grey
+    width: 260px
+    list-style: none
+    padding: 24px 20px
+    float: right
+    a
+      color: $text-grey
+      text-decoration: none
+    img
+      max-width: 30px
+      border-radius: 50%
+      margin-right: 5px
+#tooltip-member
+  strong
+    text-align: left
+    float: left
+    width: 100%
+  ul
+    text-align: left
+    margin: 0
+    padding: 0
+    padding-left: 20px
+.b-table
+  .badge
+    margin-right: .5em
+  h3
+    margin: 0 0
+  p
+    margin: 0 0 3px
+.md-avatar
+  vertical-align: middle
+  width: 60px
+  height: auto
+  float: left
+  margin: 0 7px 7px 0
+.box
+  float: left
+  padding-top: 11px
+  h5
+    font-family: 'Proxima Nova Semibold', sans-serif
+    font-size: 14px
+    margin-top: 12px
+  img
+    display: inline-block
+    float: none
+    max-height: 41px
+    width: auto
+    margin-right: 15px
+    max-width: 41px

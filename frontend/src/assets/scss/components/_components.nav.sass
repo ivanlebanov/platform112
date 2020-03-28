@@ -1,0 +1,343 @@
+.menu-toggle
+  display: none
+.nav-main
+  background: $main
+  float: left
+  display: block
+  width: 100%
+  padding: 1.2em 0 1.2em 0
+  img
+    max-height: 50px
+  ul
+    list-style: none
+    margin: .8em 0 0
+    padding: 0
+    float: right
+    li
+      display: block
+      float: left
+      margin: 0 10px
+  a
+    color: $white
+    text-decoration: none
+    padding: 0 5px 5px
+    border-bottom: 2px solid transparent
+    -webkit-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out
+    -o-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+    &:hover
+      color: $white
+      text-decoration: none
+    &.active
+      border-bottom-color: $white
+  &.nav-legal
+    ul
+      float: left
+
+.col-lg-2.sidebar
+  background: $main
+  position: fixed
+  left: 0
+  z-index: 9
+  width: 100%
+  top: 0
+  bottom: 0
+  overflow: auto
+  padding: 0
+  font-family: 'Proxima Nova Semibold'
+  img
+    min-width: 1px
+  .bottom-menu
+    position: absolute
+    bottom: 0
+    padding-bottom: 15px
+    opacity: .6
+    right: 0
+    left: 0
+    li
+      border-bottom: 0
+      .sub-nav
+        opacity: 1
+        a
+          padding-left: 65px
+      img
+        min-width: 1px
+      a
+        font-size: 90%
+        padding-left: 30px
+        img
+          width: 22px
+          margin-right: 10px
+        svg
+          fill: #fff
+          width: 40px
+          right: 15px
+      a.router-link-exact-active
+        background: $main
+        color: $white
+        img
+          filter: none
+  .active-sub
+    svg
+      -ms-transform: rotate(180deg)
+      -webkit-transform: rotate(180deg)
+      transform: rotate(180deg)
+  .sub-nav
+    display: none
+    opacity: .6
+    li
+      position: relative
+      border-bottom: 0
+      &::before
+        content: ''
+        position: absolute
+        top: 23px
+        left: 39px
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background: rgba($white, 0.6)
+    a
+      padding-left: 88px
+    &.active
+      display: block
+  h5
+    padding-left: 30px
+    color: #fff
+    margin: .5em 0
+    display: block
+    float: left
+    padding: 0 0 0 1em
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    text-align: left
+
+  li
+    display: block
+    float: left
+    width: 100%
+    -webkit-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out
+    -o-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+    position: relative
+    border-bottom: 2px solid rgba($white, 0.4)
+
+  a
+    text-align: center
+    color: #fff
+    padding: 13px 15px 13px 27px
+    display: block
+    float: left
+    width: 100%
+    text-align: left
+    font-size: 16px
+  img
+    width: auto
+    padding-left: 0
+    margin: 20px 0 20px 27px
+    height: 44px
+    -webkit-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out
+    -o-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+
+  svg
+    max-width: 50px
+    height: 50px
+    position: absolute
+    right: 10px
+    fill: $white
+    opacity: .4
+    top: 0
+    padding: 10px
+    -webkit-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out
+    -o-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+  // li:hover svg
+  //   -ms-transform: rotate(180deg)
+  //   -webkit-transform: rotate(180deg)
+  //   transform: rotate(180deg)
+
+  li img
+    width: 28px
+    height: auto
+    margin: 0 30px 0 0
+    padding-left: 0
+
+  a.router-link-exact-active
+    background: #f5f5f5
+    color: #000
+    text-decoration: none
+    -webkit-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out
+    -o-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+    svg
+      fill: $main
+    img
+      filter: invert(1) sepia(1) saturate(0) hue-rotate(180deg)
+
+
+  li:hover
+    & > a
+      // background: #fff
+      // color: #000
+      text-decoration: none
+    //
+    // img
+    //   filter: invert(1) sepia(1) saturate(0) hue-rotate(180deg)
+.top-bar-wrapper
+  ul
+    padding: 24px 20px!important
+  .col input, .custom-select
+    background-color: transparent
+    border: none
+    padding-top: 15px
+    padding-bottom: 15px
+    height: auto
+    padding: 15px 30px
+  .col
+    padding: 0
+    border-right: 1px solid #E6EAEE
+  .row
+    border-bottom: 1px solid #E6EAEE
+
+@media screen and (max-width: 1370px)
+  body
+    .col-lg-2.sidebar
+      a
+        font-size: 14px
+      li img
+        width: 19px
+        margin: 0 15px 0 0
+      svg
+        max-width: 40px
+        height: 40px
+        top: 5px
+@media screen and (max-width: 1025px)
+  html body
+    .hidden-mob
+      display: none
+    .main-wrapper
+      width: 100%
+      max-width: 100%
+      flex: 0 0 100%
+  body h1
+    font-size: 2rem
+  body
+    .overlay
+      h2
+        font-size: 1.4em
+    .legal
+      .nav-main ul li
+        margin-bottom: 5px
+      h1
+        font-size: 2em
+      h2
+        font-size: 1.7em
+    .footer--main
+      position: relative
+      text-align: center
+      padding: 0.5em 0
+      ul
+        float: none
+        text-align: center
+        li
+          display: inline-block
+          float: none
+          margin-right: .7em
+    .sign-up:after
+      bottom: -5em
+      border-width: 5em 100vw 0 0
+  body .main
+    margin-top: 166px
+    height: calc(100vh - 194px)
+  body .top-bar
+    left: 0
+    top: 83px
+    &:before
+      content: none
+    input
+      display: none
+    ul
+      width: 100%
+      border-left: 0
+  body .col-lg-2.sidebar
+    width: 100%
+    position: fixed
+    left: 0
+    right: 0
+    width: 100%
+    z-index: 99
+    height: auto
+    bottom: initial
+    max-width: 100%
+    .bottom-menu
+      position: relative
+    .menu-toggle
+      fill: #fff
+      max-width: 40px
+      height: 40px
+      top: 22px
+      cursor: pointer
+      display: none
+      &.active
+        display: block
+    &.active
+      overflow-y: auto
+      bottom: 0
+    .menus
+      display: none
+      &.active
+        display: block
+@media screen and (max-width: 991px)
+  .real-heading
+    display: none!important
+  body .card.tile
+    //padding-bottom: 15px
+    .col-lg-2:nth-child(1)
+      width: 40%
+      max-width: 40%
+    .col-lg-4.icons
+      width: 60%
+      max-width: 60%
+    .col-lg-2:nth-child(2), .col-lg-2:nth-child(3), .col-lg-2:nth-child(4)
+      display: none
+@media screen and (max-width: 425px)
+  .nav-main
+    ul
+      margin-top: 7px
+.active-icon
+  -webkit-transition: all .3s ease-in-out
+  -moz-transition: all .3s ease-in-out
+  -o-transition: all .3s ease-in-out
+  transition: all .3s ease-in-out
+  cursor: pointer
+  path
+    -webkit-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out
+    -o-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+    fill: $main
+.tile
+  svg
+    cursor: pointer
+.active-dropdown
+  -webkit-transition: all .3s ease-in-out
+  -moz-transition: all .3s ease-in-out
+  -o-transition: all .3s ease-in-out
+  transition: all .3s ease-in-out
+  -ms-transform: rotate(90deg)
+  -webkit-transform: rotate(90deg)
+  transform: rotate(90deg)
+body .card-header
+  font-family: 'Proxima Nova Semibold', sans-serif
+  background: $white
+  color: $text-grey
+  text-transform: uppercase
+  font-size: 12px

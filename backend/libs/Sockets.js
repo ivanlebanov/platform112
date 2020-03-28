@@ -11,6 +11,7 @@ class Sockets {
           this.#onlineUsers[userTokenOrId] = []
         }
         this.#onlineUsers[userTokenOrId].push(socket.id)
+        console.log(this.#onlineUsers)
         this.#io.emit('USERS_ONLINE', this.#onlineUsers)
       })
     })

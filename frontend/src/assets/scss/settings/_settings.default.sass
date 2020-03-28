@@ -1,0 +1,104 @@
+// ========================================
+//   #settings.default
+// ========================================
+$red: red
+$main: #faf4f4
+$white: #fff
+$main--active: #354052
+$border-grey: #E6EAEE
+$icon-grey: #CCCFD4
+$text-grey: #AAB1B7
+html body
+  color: black
+@font-face
+  font-family: 'Proxima Nova Regular'
+  font-style: normal
+  font-weight: normal
+  src: local('Proxima Nova Regular'), url('./fonts/ProximaNova-Regular.woff') format('woff')
+
+
+
+@font-face
+  font-family: 'Proxima Nova Thin'
+  font-style: normal
+  font-weight: normal
+  src: local('Proxima Nova Thin'), url('./fonts/ProximaNovaT-Thin.woff') format('woff')
+
+
+
+@font-face
+  font-family: 'Proxima Nova Light'
+  font-style: normal
+  font-weight: normal
+  src: local('Proxima Nova Light'), url('./fonts/ProximaNova-Light.woff') format('woff')
+
+
+
+@font-face
+  font-family: 'Proxima Nova Semibold'
+  font-style: normal
+  font-weight: normal
+  src: local('Proxima Nova Semibold'), url('./fonts/ProximaNova-Semibold.woff') format('woff')
+
+
+
+@font-face
+  font-family: 'Proxima Nova Bold'
+  font-style: normal
+  font-weight: normal
+  src: local('Proxima Nova Bold'), url('./fonts/ProximaNova-Bold.woff') format('woff')
+
+
+
+@font-face
+  font-family: 'Proxima Nova Extrabold'
+  font-style: normal
+  font-weight: normal
+  src: local('Proxima Nova Extrabold'), url('./fonts/ProximaNova-Extrabld.woff') format('woff')
+
+
+
+@font-face
+  font-family: 'Proxima Nova Black'
+  font-style: normal
+  font-weight: normal
+  src: local('Proxima Nova Black'), url('./fonts/ProximaNova-Black.woff') format('woff')
+
+#app
+  font-family: 'Proxima Nova Regular', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.tile
+  font-family: 'Proxima Nova Semibold', Helvetica, Arial, sans-serif
+  font-size: 14px
+  min-height: 72px
+  .card-body
+    padding: 0 15px
+  .icons
+    margin-top: 1em
+    svg
+      margin-top: .9em
+      margin-right: 15px
+    .right-icon
+      position: absolute
+      right: 0
+      top: 3px
+    ul
+      text-align: right
+      li
+        display: inline-block
+        float: none
+h1, h2, h3, h4, h5, h6
+  font-family: 'Proxima Nova Semibold', sans-serif
+@mixin vertical-align($position: relative)
+  position: $position
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+.text-grey-light
+  color: #9FA9BA!important
+  font-size: 12px
+.font-regular
+  font-family: 'Proxima Nova Regular', Helvetica, Arial, sans-serif

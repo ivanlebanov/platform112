@@ -1,0 +1,124 @@
+// ========================================
+//   #components.default
+// ========================================
+.color-list
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    display: block
+    float: left
+    &.selected
+      .square
+        border: 3px solid #000
+  .square
+    width: 30px
+    height: 30px
+    margin-right: 5px
+    margin-bottom: 5px
+    cursor: pointer
+.avatar-square
+  opacity: 0.4
+  display: block
+  float: left
+  padding: 6px 0
+  text-align: center
+  width: 33px
+  height: 33px
+  color: #fff
+  border-radius: 4px
+.avatar-text
+  margin: 5px 10px
+  display: block
+  float: left
+.sign-up
+  background: $main
+  padding: 0 0 3em 0
+  color: $white
+  position: relative
+  // border-bottom-right-radius: 5em
+  height: 100vh
+  .half-bg
+    position: absolute
+    z-index: -1
+    background: $main
+    border-bottom-right-radius: 2em
+    left: 0
+    width: 52vw
+    height: calc(100% + 85px)
+    top: -85px
+  p
+    font-size: 46px
+    margin-bottom: 1em
+  h1
+    margin-bottom: 1em
+  svg.logo
+    width: 50%
+    height: auto
+    margin: 0 0 3em
+  // &:before
+  //   content: ''
+  //   position: absolute
+  //   top: -25vh
+  //   left: -40vw
+  //   width: 80vw
+  //   height: 50vh
+  //   z-index: -1
+  //   // width: 15px
+  //   // height: 15px
+  //   border-radius: 50%
+  //   background-color: $main
+  // &:after
+  //   //content: ' '
+  //   position: absolute
+  //   left: 0
+  //   bottom: 0
+  //   top: -89px
+  //   background: $main
+  //   width: 50vw
+  //   z-index: -1
+  //   // border-style: solid
+  //   // border-width: 20em 100vw 0 0
+  //   // border-color: $main transparent transparent transparent
+.headings
+  text-transform: uppercase
+  font-size: 12px
+  font-family: 'Proxima Nova Semibold'
+  color: $text-grey
+body .mt-2, body .my-2
+  margin-top: 1.4em !important
+.circle
+  margin: 17px 0 0 0
+  background: #D0021B
+  height: 10px
+  width: 10px
+  border-radius: 50%
+  display: block
+  float: left
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    height: 14px
+    width: 14px
+    background: none
+    border-radius: 50%
+    top: -2px
+    left: -2px
+    border: 1px solid #D0021B
+  &.green
+    background: #00CD26
+    &::before
+      border-color: #00CD26
+@media screen and (max-width: 1025px)
+  body .sign-up
+    height: auto
+    min-height: 100vh
+    svg.logo
+      margin-top: 2em
+    .centered-div
+      position: relative
+      top: 0
+      transform: none
+    p
+      font-size: 1.5em
