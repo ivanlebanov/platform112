@@ -36,7 +36,10 @@ const sockets = require('./libs/Sockets')
 sockets.init(server)
 
 const user = require('./functions/user.js')
+const project = require('./functions/project.js')
+
 app.post('/user', user.register)
 app.post('/user/login', user.login)
 app.get('/user/authenticated', VerifyToken, user.authenticated)
 app.post('/user/logout', VerifyToken, user.logout)
+app.post('/projects/fetch', project.fetch)
