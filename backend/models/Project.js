@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 // Not sure
 const schema = mongoose.Schema({
-  name: String,
+  hacker: String,
   needs: String,
   category: String,
   team: String,

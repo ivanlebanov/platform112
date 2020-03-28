@@ -39,9 +39,9 @@ class Projects {
         }
       }
       let obj = new Project({
-        name: elem[0].children[0].next.data,
+        category: elem[0].children[0].next.data,
         slack: elem[0].children[4].data,
-        category: elem[0].children[6].next.data,
+        hacker: elem[0].children[6].next.data,
         needs: elem[0].children[10].data,
         description,
         solution
