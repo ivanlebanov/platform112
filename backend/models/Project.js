@@ -8,6 +8,9 @@ const schema = mongoose.Schema({
     slack: String,
     description: String,
     solution: String,
-    natural: 'Mixed'
+    descriptionEn: String,
+    solutionEn: String,
+    needsEn: String,
+    terms: 'Mixed'
 });
 module.exports = mongoose.model('Project', schema, 'Project')
