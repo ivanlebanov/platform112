@@ -19,6 +19,11 @@ const schema = mongoose.Schema({
       }
     }
   ],
-  ctas: []
+  ctas: [{
+    questionnaire: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Questionnaire'
+    }
+  }]
 })
 module.exports = mongoose.model('Topic', schema, 'Topic')

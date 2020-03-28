@@ -45,7 +45,17 @@ const schema = mongoose.Schema({
       type: String,
       required: true
     }
-  }]
+  }],
+  questionnaireData: [
+    {
+      questionnaire: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Questionnaire'
+      },
+      key: String,
+      value: mongoose.Schema.Types.Mixed
+    }
+  ]
 })
 
 schema.pre('save', async function (next) {
