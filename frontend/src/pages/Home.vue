@@ -28,7 +28,7 @@
                   <br>
                   <div class="">
                     Tags:
-                    <b-badge pill variant="primary" v-for="tag in project.tags" :key="tag.tag" class="ml-2">{{ tag.tag }}</b-badge>
+                    <b-badge pill variant="primary" v-for="tag in project.terms" :key="tag.term" class="ml-2">{{ tag.term }}</b-badge>
                   </div>
                 </div>
               </div>
