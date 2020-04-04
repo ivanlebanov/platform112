@@ -85,10 +85,7 @@ class Projects {
         tfidfCommon = new TfIdf();
         projects.forEach((project, i) => {
             if (project.solutionEn || project.descriptionEn) {
-                tfidfCommon.addDocument(project.solutionEn);
-                if (project.descriptionEn) {
-                    tfidfCommon.addDocument(project.descriptionEn);
-                }
+                tfidfCommon.addDocument((project.solutionEn || '') + ' ' + (project.descriptionEn || ''));
                 indexMapping.push(i);
             }
             total++;
